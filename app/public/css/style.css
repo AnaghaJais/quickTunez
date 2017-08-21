@@ -2,6 +2,14 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+
+/*#login{
+  display:none;
+}*/
+
+>>>>>>> 9d0550df3d26c776a7ecbd98a2087ecbc2ae9939
 
 #register{
   display: none;
