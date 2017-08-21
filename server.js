@@ -200,7 +200,7 @@ for(var i = 0; i<10;i++){
       // console.log(rooms.room[socket.room].users[socket.id]);
       // console.log(nsp.adapter.rooms);
       // console.log(rooms.room[socket.room].songlist);
-      if(rooms.room[socket.room].userCount == 1){
+      if(rooms.room[socket.room].userCount == 2){
         emitNewQuestion(socket.room);
       }
       nsp.to(socket.room).emit("playersDetails", rooms.room[socket.room].users);
@@ -299,9 +299,8 @@ function emitNewQuestion(data) {
     //console.log("THIS WORKS");
     //console.log(rooms.room[data]);
     setTimeout(function(){
-     nsp.to(socket.room).emit("timer");
-      emitNewQuestion(data);
 
+      emitNewQuestion(data);
     }, timeToEnjoyAnswerMs);
   }
   //roooms.room[data].song1=
