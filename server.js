@@ -3,7 +3,7 @@ var express = require('express');
 var app = express();
 var passport = require('passport');
 var session = require('express-session');
- var FileStore = require('session-file-store')(session);
+ //var FileStore = require('session-file-store')(session);
 var bodyParser = require('body-parser');
 var env = require('dotenv').load();
 var exphbs = require('express-handlebars');
@@ -61,7 +61,7 @@ app.use(require('morgan')('dev'));
 
 
 // -----------------   Setup Passport   -----------------
-app.use(session({
+/*app.use(session({
   name: 'server-session-cookie-id',
   secret: 'powder blue',
   resave: true,
@@ -72,9 +72,9 @@ app.use(function printSession(req, res, next) {
   console.log('req.session', req.session);
   return next();
 });
-
+*/
 app.use(passport.initialize());
-app.use(passport.session());  // Persistent login session
+//app.use(passport.session());  // Persistent login session
 
 
 

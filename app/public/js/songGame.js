@@ -1,5 +1,5 @@
 //---------------------   CAPTURING USER CHOICES   ---------------------//
-var io = require('socket.io')(http);
+//var io = require('socket.io')(http);
 
 var roomChosen = 0;
 var catChosen = 0;
